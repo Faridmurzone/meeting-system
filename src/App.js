@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Create from "./views/Create.js";
 import History from "./views/History.js";
 import Home from "./views/Home.js";
+import NotFound from "./views/NotFound.js";
 /** Autonomous */
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/index.scss";

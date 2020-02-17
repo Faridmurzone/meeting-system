@@ -13,6 +13,6 @@ function* actionWatcher() {
      yield takeLatest('GET_USERS', fetchUsers)
 }
 
-export default function* rootSaga() {
+export function* rootSaga() {
    yield all([actionWatcher()])
 }

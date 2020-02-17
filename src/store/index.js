@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga'
-import { helloSaga } from './sagas'
+import { rootSaga } from './sagas/helloSaga'
 import rootReducer from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -14,7 +14,7 @@ export default function configureStore(initialState) {
             applyMiddleware(sagaMiddleware)
             ) 
     )
-    sagaMiddleware.run(helloSaga)
+    sagaMiddleware.run(rootSaga)
     const action = type => store.dispatch({type})
     
     return action;
